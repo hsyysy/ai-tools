@@ -40,7 +40,7 @@ std::string shapeToString(const std::vector<int64_t>& shape) {
 }
 
 void printTableHeader() {
-    std::cout << std::string(120, '=') << std::endl;
+    std::cout << std::string(80, '=') << std::endl;
     std::cout << std::left 
               << std::setw(8) << "Index"
               << std::setw(12) << "Type"
@@ -50,7 +50,7 @@ void printTableHeader() {
               << std::setw(20) << ""
               << std::setw(20) << ""
               << std::setw(8) << "" << std::endl;
-    std::cout << std::string(120, '-') << std::endl;
+    std::cout << std::string(80, '-') << std::endl;
 }
 
 void printTableRow(int index, const std::string& type, const std::string& name, 
@@ -116,7 +116,7 @@ int main(int argc, char* argv[]) {
             printTableRow(input_count + i, "OUTPUT", name, type, shapeToString(shape));
         }
         
-        std::cout << std::string(120, '=') << std::endl;
+        std::cout << std::string(80, '=') << std::endl;
         
     } catch (const Ort::Exception& e) {
         std::cerr << "ONNX Runtime error: " << e.what() << std::endl;
